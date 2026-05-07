@@ -17,8 +17,13 @@ public class functions {
         if(x<=10){
             System.out.println(x);
             x++;
-printwithoutloop();
+            printwithoutloop();
         }
+    }
+    public void callbyreference(product product){
+        product.productname="shirt";
+        product.price=5000;
+
     }
 
 }
