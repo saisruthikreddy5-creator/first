@@ -10,7 +10,7 @@ public class upipayment extends payment{
             account.balance-=transferamount;
         }
         else {
-            throw new Invalidbalanceexception("invalid balance");
+            throw new Invalidbalanceexception("invalid  balance");
         }
     }
 }
