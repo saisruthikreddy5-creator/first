@@ -4,28 +4,33 @@ import Statements.statements;
 import account.Invalidbalanceexception;
 import account.account;
 import classsharing.classA;
+import collectios.employee;
 import operator.operators;
 import payement.payment;
 import payement.upipayment;
 import  account.savingsaccount;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args){
-        try {
-                    account account=new savingsaccount(111, "sai", 20000);
+    public static void main(String[] args) throws IOException {
+        employee emp1 = new employee(112,"surya",200);
+        employee emp2 = new employee(111,"ravi",300);
 
-            payment p = new upipayment();
-            p.account = account;
-
-            p.dopayement(21000);
-
-            System.out.println(account.balance);
-
-        } catch (Invalidbalanceexception e) {
-            System.out.println(e.getMessage());
-        }
-
+        List<employee> list = new ArrayList<>();
+        list.add(emp1);
+        list.add(emp2);
+        Collections.sort(list, Comparator.comparingInt(employee -> employee.getEid()));
+        list.forEach(s->System.out.println(s.getEid()));
     }
 
 }
