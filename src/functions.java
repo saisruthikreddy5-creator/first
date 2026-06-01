@@ -1,3 +1,5 @@
+package src;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -23,7 +25,7 @@ public class functions {
             x++;
             printwithoutloop();
         }
-    }
+    }/*
     public void callbyreference(product product){
         product.productname="shirt";
         product.price=5000;
@@ -34,7 +36,7 @@ public class functions {
         list.add(new product("fan",2000));
         list.add(new product("oven",5000));
         return list;
-    }
+    }*/
 public int reversenumber(int number){
         String num=""+number;
     String Num = "";

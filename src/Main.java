@@ -1,18 +1,7 @@
 package src;
 
-import Statements.statements;
-import account.Invalidbalanceexception;
-import account.account;
-import classsharing.classA;
 import collectios.employee;
-import operator.operators;
-import payement.payment;
-import payement.upipayment;
-import  account.savingsaccount;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -31,6 +20,11 @@ public class Main {
         list.add(emp2);
         Collections.sort(list, Comparator.comparingInt(employee -> employee.getEid()));
         list.forEach(s->System.out.println(s.getEid()));
+
+        functionalinterface functionalinterface1=new functionalinterface();
+      System.out.println(  functionalinterface1.binaryOperator.test(4,3));
+        System.out.println( new  functionalinterface().predicate.test(3));
+
     }
 
 }
