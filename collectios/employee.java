@@ -11,6 +11,15 @@ public class employee {
         this.salary = salary;
     }
 
+    @Override
+    public String toString() {
+        return "employee{" +
+                "eid=" + eid +
+                ", ename='" + ename + '\'' +
+                ", salary=" + salary +
+                '}';
+    }
+
     public int getEid() {
         return eid;
     }
