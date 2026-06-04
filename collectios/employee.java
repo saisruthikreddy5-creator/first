@@ -1,5 +1,7 @@
 package collectios;
 
+import java.util.Objects;
+
 public class employee {
     private int eid;
     private String ename;
@@ -9,6 +11,19 @@ public class employee {
         this.eid = eid;
         this.ename = ename;
         this.salary = salary;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        employee emp = (employee) o;
+
+        return this.eid == emp.eid;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(eid);
     }
 
     @Override
