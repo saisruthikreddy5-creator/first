@@ -55,10 +55,11 @@ empList.stream().
         System.out.println("\n\n");
         System.out.println("sorting using treeset ");
         TreeSet<employee> empSet = new TreeSet<>(new mycomparator());
-        empSet.addAll(Set.of(new employee(111, "ravi", 300),
-                new employee(113, "surya", 900),
-                new employee(112, "rajesh", 200),
-                new employee(114, "veer", 300)));
+        empSet.add(new employee(111, "ravi", 300));
+        empSet.add(new employee(113, "surya", 900));
+        empSet.add(new employee(112, "rajesh", 200));
+        empSet.add(new employee(113, "veer", 300));
+
 
       empSet.stream().forEach(s->System.out.println(s));
 
